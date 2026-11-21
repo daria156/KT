@@ -122,3 +122,6 @@ onlyOpen.addEventListener("change", function() {
     renderTickets();
 });
 
+filterCategory.addEventListener("change", function() {
+    renderTickets();
+});
