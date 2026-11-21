@@ -75,12 +75,11 @@ function renderTickets() {
         deleteButton.addEventListener("click", function() {
             tickets.splice(index, 1);
             renderTickets();
-        });
-
+    
         item.append(deleteButton);
 
         ticketList.append(item);
-
+     });
 
     if (count == 0) {
         if (onlyOpen.checked && filterCategory.value == "") {
@@ -89,3 +88,12 @@ function renderTickets() {
             ticketList.textContent = "Нет заявок по выбранным фильтрам";
         }
     }
+
+    addButton.addEventListener("click", function() {
+
+    const title = input1.value.trim();
+    const room = input2.value.trim();
+    const category = selectCategory.value;
+
+    
+
