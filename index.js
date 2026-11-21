@@ -46,4 +46,12 @@ function renderTickets() {
 
         let status = document.createElement("p");
        });
+
+    if (tickets.done == true) {
+        status.textContent = "Выполнено"
+    } else {
+        status.textContent = "Открыто"
+    }
+    
+
 }
