@@ -19,7 +19,31 @@ function renderTickets() {
    ticketList.innerHTML = ""
        let count = 0;
 
-       
+       if (tickets.length === "") {
+        ticketList.textContent = "Заявок пока нет"
+        return
+       }
+
+       tickets.forEach(function(ticket, index) {
+         if (onlyOpen.checked && ticket.done == true) {
+            return;
         }
+        
+        if (filterCategory.value != "" && ticket.category != filterCategory.value) {
+            return;
+        }
+
+        count++
+        let item = document.createElement("div");
+        let title = document.createElement("h3");
+
+        title.textContent = ticket.title;
+        let room = document.createElement("p");
+        room.textContent = "Место: " + ticket.room;
+
+        let category = document.createElement("p");
+        category.textContent = "Категория: " + ticket.category;
+
+        let status = document.createElement("p");
        });
 }
