@@ -68,3 +68,24 @@ function renderTickets() {
             });
                  item.append(doneButton);
     }
+
+     let deleteButton = document.createElement("button");
+        deleteButton.textContent = "Удалить";
+
+        deleteButton.addEventListener("click", function() {
+            tickets.splice(index, 1);
+            renderTickets();
+        });
+
+        item.append(deleteButton);
+
+        ticketList.append(item);
+
+
+    if (count == 0) {
+        if (onlyOpen.checked && filterCategory.value == "") {
+            ticketList.textContent = "Открытых заявок нет";
+        } else {
+            ticketList.textContent = "Нет заявок по выбранным фильтрам";
+        }
+    }
