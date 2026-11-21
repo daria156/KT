@@ -25,13 +25,28 @@
     <option value="Аудитория">Аудитория</option>
     <option value="Другое">Аудитория</option>
 
-
     <button id="addButton">Добавить заявку</button>
 
     <p id="message"></p>
     </div>
     </div>
 
+   <div class="filters">
+            <h2>Список заявок</h2>
+            <label for="onlyOpen">
+                <input type="checkbox" id="onlyOpen">
+                Только открытые
+            </label>
+            <label for="filterCategory">Фильтр по категории:</label>
+            <select id="filterCategory">
+                <option value="">Все категории</option>
+                <option value="Оборудование">Оборудование</option>
+                <option value="Аудитория">Аудитория</option>
+                <option value="Другое">Другое</option>
+            </select>
+        </div>
+        <div id="ticketList"></div>
+    </div>
 
 </body>
 </html>
