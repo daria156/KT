@@ -47,11 +47,24 @@ function renderTickets() {
         let status = document.createElement("p");
        });
 
-    if (tickets.done == true) {
+    if (ticket.done == true) {
         status.textContent = "Выполнено"
     } else {
         status.textContent = "Открыто"
-    }
-    
+    }    
+} 
+    item.append(title);
+    item.append(room);
+    item.append(category);
+    item.append(status);
 
-}
+    if (ticket.done == false) {
+         let doneButton = document.createElement("button");
+            doneButton.textContent = "Выполнить";
+
+            doneButton.addEventListener("click", function() {
+                tickets[index].done = true;
+                renderTickets();
+            });
+                 item.append(doneButton);
+    }
