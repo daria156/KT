@@ -1,43 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Заявки корпуса</title>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-    <h1>Заявки корпуса</h1>
+        <h1>Заявки корпуса</h1>
+        <div class="form">
+            <h2>Добавить заявку</h2>
+            <label for="input1">Что случилось?</label>
+            <input type="text" id="input1" placeholder="Укажите, что случилось">
 
-    <div class="form">
-        <h1>Добавить заявку</h1>
-        <label for="title">Что случилось?</label>
-        <input type="text" id="input1" placeholder = "Укажите что случилось">
-    <label for="room">Где?</label> 
-    <input type="text" id="input2" placeholder = "Укажите место"> 
+            <label for="input2">Где?</label>
+            <input type="text" id="input2" placeholder="Укажите место">
 
-    <label for="category">Категория</label>
-    <select id="selectCategory">Категория</select>
-    <option value="">Выберите категорию</option>
-    <option value="Оборудование">Оборудование</option>
-    <option value="Аудитория">Аудитория</option>
-    <option value="Другое">Аудитория</option>
+            <label for="selectCategory">Категория</label>
+            <select id="selectCategory">
+                <option value="">Выберите категорию</option>
+                <option value="Оборудование">Оборудование</option>
+                <option value="Аудитория">Аудитория</option>
+                <option value="Другое">Другое</option>
+            </select>
 
-    <button id="addButton">Добавить заявку</button>
+            <button id="addButton">Добавить заявку</button>
 
-    <p id="message"></p>
-    </div>
-    </div>
+            <p id="message"></p>
+        </div>
 
-   <div class="filters">
+        <div class="filters">
             <h2>Список заявок</h2>
             <label for="onlyOpen">
                 <input type="checkbox" id="onlyOpen">
                 Только открытые
             </label>
+
             <label for="filterCategory">Фильтр по категории:</label>
+
             <select id="filterCategory">
                 <option value="">Все категории</option>
                 <option value="Оборудование">Оборудование</option>
