@@ -8,11 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Заявки корпуса</h1>
-<p>Что случилось?</p>
-<p>Где?</p>
+    <div class="container">
+    <h1>Заявки корпуса</h1>
 
-<select id="selectCategory">Категория</select>
-<button id="button">Добавить заявку</button>
+    <div class="form">
+        <h1>Добавить заявку</h1>
+        <label for="title">Что случилось?</label>
+        <input type="text" id="input1" placeholder = "Укажите что случилось">
+    <label for="room">Где?</label> 
+    <input type="text" id="input2" placeholder = "Укажите место"> 
+
+    <label for="category">Категория</label>
+    <select id="selectCategory">Категория</select>
+    <option value="">Выберите категорию</option>
+    <option value="Оборудование">Оборудование</option>
+    <option value="Аудитория">Аудитория</option>
+    <option value="Другое">Аудитория</option>
+
+    
+    <button id="button">Добавить заявку</button>
+
+
+    <p id="message"></p>
+    </div>
+    </div>
+
+
 </body>
 </html>
