@@ -95,5 +95,26 @@ function renderTickets() {
     const room = input2.value.trim();
     const category = selectCategory.value;
 
-    
+    if (title == "" || room == "" || category == "") {
+        message.textContent = "Заполните все поля!";
+        return;
+    }
+
+    const newTicket = {
+        title: title,
+        room: room,
+        category: category,
+        done: false
+    };
+
+    tickets.push(newTicket);
+
+    input1.value = "";
+    input2.value = "";
+    selectCategory.value = "";
+
+    message.textContent = "";
+
+    renderTickets();
+});
 
