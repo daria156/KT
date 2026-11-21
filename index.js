@@ -118,3 +118,7 @@ function renderTickets() {
     renderTickets();
 });
 
+onlyOpen.addEventListener("change", function() {
+    renderTickets();
+});
+
