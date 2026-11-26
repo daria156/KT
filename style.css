@@ -1,11 +1,13 @@
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #323232;
     margin: 0;
     padding: 30px;
 }
@@ -17,11 +19,14 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #ff0088;
+    font-size: 40px;
+    margin: 10px;
 }
 
 .form {
-    background-color: white;
+    background-color: rgb(65, 65, 65);
+    border: 2px solid #75013f;
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 25px;
@@ -29,27 +34,32 @@ h1 {
 
 .form h2 {
     margin-top: 0;
+    color: #ff2c9d;
+   
 }
 
 label {
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
+    color: #f89acc;
 }
 
-input[type="text"],
+input[type="text" ], 
 select {
-    width: 100%;
+    background: #75013f;
+    width: 100%;    
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid hsl(322, 82%, 78%);
     border-radius: 5px;
     font-size: 15px;
+    color: #000000;
 }
 
 button {
     padding: 10px 15px;
-    background-color: #4776b4;
-    color: white;
+    background-color: #ff2c9d;
+    color: #450125;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -57,7 +67,7 @@ button {
 }
 
 button:hover {
-    background-color: #345d91;
+    background-color: #75013f;
 }
 
 #message {
@@ -65,7 +75,8 @@ button:hover {
 }
 
 .filters {
-    background-color: white;
+    background-color: rgb(65, 65, 65);
+    border: 2px solid #75013f;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -73,6 +84,7 @@ button:hover {
 
 .filters h2 {
     margin-top: 0;
+    color: #ff0088;
 }
 
 .filters label:first-of-type {
@@ -82,13 +94,14 @@ button:hover {
     margin-bottom: 15px;
 }
 
-#onlyOpen {
+#onlyOpen, #onlyClose {
     width: auto;
-    margin: 0;
+    margin: 0;  
 }
 
 .ticket {
-    background-color: white;
+    background-color: rgb(65, 65, 65);
+    border: 2px solid #75013f;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -96,7 +109,7 @@ button:hover {
 
 .ticket h3 {
     margin-top: 0;
-    color: #333;
+    color: #ff0088;
 }
 
 .ticket button {
@@ -105,9 +118,10 @@ button:hover {
 }
 
 .ticket button:last-child {
-    background-color: #c94c4c;
+    background-color: #450125;
+    color: #f89acc;
 }
 
 .ticket button:last-child:hover {
-    background-color: #a93636;
+    background-color: #ff0088;
 }

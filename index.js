@@ -11,6 +11,7 @@ const addButton = document.getElementById('addButton');
 const message = document.getElementById('message');
 
 const onlyOpen = document.getElementById('onlyOpen');
+const onlyClose = document.getElementById('onlyClose');
 const filterCategory = document.getElementById('filterCategory');
 const ticketList = document.getElementById('ticketList');
 
@@ -28,6 +29,9 @@ function renderTickets() {
     tickets.forEach(function(ticket, index) {
 
         if (onlyOpen.checked && ticket.done == true) {
+            return;
+        }
+        if (onlyClose.checked && ticket.done == false) {
             return;
         }
         if (filterCategory.value != "" && ticket.category != filterCategory.value) {
@@ -91,6 +95,9 @@ function renderTickets() {
     if (count == 0) {
         if (onlyOpen.checked && filterCategory.value == "") {
             ticketList.textContent = "Открытых заявок нет";
+        } else if (onlyClose.checked && filterCategory.value == "") {
+            ticketList.textContent = "Закрытых заявок нет";
+
         } else {
             ticketList.textContent = "Нет заявок по выбранным фильтрам";
         }
@@ -129,7 +136,17 @@ addButton.addEventListener("click", function() {
 
 
 onlyOpen.addEventListener("change", function() {
-    renderTickets();
+if (onlyOpen.checked) {
+        onlyClose.checked = false
+}
+renderTickets();
+});
+
+onlyClose.addEventListener("change", function() {
+if (onlyClose.checked) {
+        onlyOpen.checked = false
+}
+renderTickets();
 });
 
 
